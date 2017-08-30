@@ -11,9 +11,10 @@ function Board(x,y) {
     var cols = y;
     var tiles = [];
 
+    initialize();
 
     // Create Board
-    var initialize = function() {
+    function initialize() {
 
         // Loop through rows
         for (var i = 0; i < rows; i++) {
@@ -209,6 +210,4 @@ function Board(x,y) {
     this.getOccupiedCount = function() {
         return getOccupiedTiles().length;
     };
-
-    initialize();
 }
