@@ -11,15 +11,16 @@ function Board(x,y) {
     var cols = y;
     var tiles = [];
 
+    initialize();
 
     // Create Board
-    var initialize = function() {
+    function initialize() {
 
         // Loop through rows
         for (var i = 0; i < rows; i++) {
             var row = [];
             // Loop through columns
-            var tr = $("<tr class='row'></tr>");
+            var rowDom = $("<div class='row'></div>");
             for (var j = 0; j < cols; j++) {
                 // Create tile object, using currents coords as parameters
                 var tile = new Tile(i, j);
@@ -30,19 +31,17 @@ function Board(x,y) {
                 // Add tile to row
                 row.push(tile);
 
-                var buffer = $("<div>").addClass("buffer");
-                var t = $("<div>").attr("id", identity);
+                var t = $("<div>").attr("id", identity).addClass("tile-container");
                 if((tileValue[0]%2===0 && tileValue[1]%2===0) || (tileValue[0]%2===1 && tileValue[1]%2===1)){
-                    var td = $('<td class="square blackgradient"></td>');
+                    var td = $('<div class="square blacksquare"></div>');
                 }
                 else{
-                    var td = $("<td class='square redgradient' ></td>");
+                    var td = $("<div class='square redsquare' ></div>");
                 }
-                buffer.append(t);
-                td.append(buffer);
-                tr.append(td);
+                td.append(t);
+                rowDom.append(td);
             }
-            $('tbody').append(tr);
+            $('#board').append(rowDom);
             tiles.push(row);
         }
     };
@@ -209,6 +208,4 @@ function Board(x,y) {
     this.getOccupiedCount = function() {
         return getOccupiedTiles().length;
     };
-
-    initialize();
 }
