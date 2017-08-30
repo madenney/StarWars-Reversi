@@ -18,16 +18,14 @@ body {
 }
 
 #game-content{
-    width: 99vw;
-    height: 99vh;
-    border: solid blue 2px;
+    width: 97vw;
+    height: 97vh;
 }
 
 .player-container{
     vertical-align: top;
     width: 19.5%;
     height: 70vh;
-    border: solid red 2px;
     box-sizing: border-box;
     display: inline-block;
 }
@@ -78,7 +76,6 @@ body {
     width: 60%;
     height: 70vh;
     display: inline-block;
-    border: solid green 2px;
     box-sizing: border-box;
     padding: 0px 50px;
     font-size: 0px;
@@ -88,6 +85,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: limegreen;
+    margin: auto;
 }
 
 .square{
@@ -97,8 +95,7 @@ body {
     box-sizing: border-box;
     background-color: white;
     border: 1px black solid;
-    padding: 10px;
-    #overflow: hidden;
+    padding: 1%;
 }
 
 .blacksquare{
@@ -118,13 +115,6 @@ body {
     height:100%;
 }
 
-.buffer {
-    width: 100%;
-    height: 100%;
-    padding-top: 10%;
-    text-align: center;
-}
-
 .tile {
     width: 100%;
     height: 100%;
@@ -136,12 +126,14 @@ body {
     background-repeat: no-repeat;
     border: solid black;
     border-radius: 100%;
+    box-sizing: border-box;
 }
 
 .black {
     background-image: url("assets/black2.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
 .title{
@@ -237,13 +229,83 @@ body {
     float: right;
 }
 
+#smaller-score{
+    margin-top: 30px;
+    display:none;
+    height: auto;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.smaller-player-box{
+    height: 16vh;
+    background-color: black;
+    font-size: 30px;
+    color: white;
+    margin-left: 11%;
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    border: solid pink 2px;
+}
+
 /* ------------- Mobile Responsiveness ------------ */
 /* ------------------------------------------------ */
 
+@media only screen and (max-width: 2500px) {
+    #board{
+        width: 700px;
+        height: 700px;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    #board{
+        width: 600px;
+        height: 600px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    #board{
+        width: 500px;
+        height: 500px;
+    }
+}
 
-
-
-
+@media only screen and (max-width: 900px) {
+    #board-container{
+        padding: 0px;
+        width: 100vw;
+    }
+    #choose-destiny-modal{
+        width: 80vw;
+        margin-left: 10vw;
+    }
+    .player-container{
+        display: none;
+    }
+    #smaller-score{
+        display: inline-block;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #board{
+        width: 300px;
+        height: 300px;
+    }
+    #choose-destiny-modal{
+        height: 35vh;
+    }
+    .character{
+        height: 55%;
+    }
+    .char-title{
+        font-size: 30px;
+    }
+    .smaller-player-box{
+        font-size: 17px;
+        height: 13vh;
+    }
+}
 
 
 
