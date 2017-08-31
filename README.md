@@ -8,7 +8,7 @@ code the logic for the game and the way it interacts with the visual components.
 I managed to add in a computer controlled opponent. It was a great experience and I enjoyed working with my team.
 
 
-#Future
+# Future
 
 > If I was to come back to this and work on it again, there are several changes I would make. 
 - Make the AI significantly smarter and add in different difficulty levels
