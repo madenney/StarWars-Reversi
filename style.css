@@ -196,6 +196,7 @@ body {
     width: 49%;
     display: inline-block;
     height: 100%;
+    text-align: center;
 }
 
 .char-title{
@@ -204,9 +205,9 @@ body {
 }
 
 .character{
-    margin: 10%;
+    margin: auto;
     margin-top: 3px;
-    width: 80%;
+    width: auto;
     height: 80%;
     border: solid black 3px;
     border-radius: 4px;
@@ -294,6 +295,9 @@ body {
     }
     #choose-destiny-modal{
         height: 35vh;
+    }
+    #choose-destiny-modal h1 {
+        font-size: 1.8em;
     }
     .character{
         height: 55%;
